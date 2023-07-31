@@ -1,15 +1,11 @@
 import { useRef, useContext, useEffect } from "react";
 import { MovieContext } from "../../services/context/moviesContext";
-import { api } from "../../services/api/api";
+import { useMovies } from "../../hooks/useMovies";
 export const Form = () => {
   const inputTerm = useRef("");
   const { setSearchTerm } = useContext(MovieContext);
-  const { setMovies } = useContext(MovieContext);
+  const getMovies = useMovies(inputTerm);
   useEffect(() => {
-    const getMovies = async () => {
-      const movies = await api(inputTerm.current);
-      setMovies(movies);
-    };
     getMovies();
   }, [inputTerm.current]);
 
