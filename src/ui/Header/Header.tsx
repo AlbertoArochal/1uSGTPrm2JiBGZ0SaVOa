@@ -1,14 +1,11 @@
 import logo from "./rviewer-logo.svg";
-import styles from './Header.module.css'
+import styles from "./Header.module.css";
+import { Form } from "../../application/form/form";
 
 export function Header() {
-
-    return (
-        <header className={styles.header}>
-            <img width={80} src={logo} className={styles.rviewerLogo} alt="Rviewer logo"/>
-            <h3>
-                Welcome to the Rviewer React skeleton!
-            </h3>
-        </header>
-    )
+  return (
+    <header className={styles.header}>
+      <Form />
+    </header>
+  );
 }
