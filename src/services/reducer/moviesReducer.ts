@@ -4,9 +4,9 @@ import { MovieType } from "../api/api";
 // Define el tipo de acción
 export type Action =
   | { type: typeof SET_MOVIES; payload: MovieType[] }
-  | { type: typeof SET_SEARCH_TERM; payload: string };
+  | { type: typeof SET_SEARCH_TERM; payload: string }
+  | { type: "SET_PAGINATION"; payload: number };
 
-// Define el tipo del reducer
 export const moviesReducer = (state = initialState, action: Action) => {
   switch (action.type) {
     case SET_MOVIES:
@@ -18,6 +18,11 @@ export const moviesReducer = (state = initialState, action: Action) => {
       return {
         ...state,
         searchTerm: action.payload,
+      };
+    case "SET_PAGINATION":
+      return {
+        ...state,
+        pagination: action.payload,
       };
     default:
       return state;

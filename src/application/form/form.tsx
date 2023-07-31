@@ -1,14 +1,25 @@
-import { useRef } from "react";
-
+import { useRef, useContext, useEffect } from "react";
+import { MovieContext } from "../../services/context/moviesContext";
+import { api } from "../../services/api/api";
 export const Form = () => {
-  const searchTerm = useRef(null);
+  const inputTerm = useRef("");
+  const { setSearchTerm } = useContext(MovieContext);
+  const { setMovies } = useContext(MovieContext);
+  useEffect(() => {
+    const getMovies = async () => {
+      const movies = await api(inputTerm.current);
+      setMovies(movies);
+    };
+    getMovies();
+  }, [inputTerm.current]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setSearchTerm(inputTerm.current);
   };
 
   const handleChange = (event) => {
-    searchTerm.current = event.target.value;
+    inputTerm.current = event.target.value;
   };
 
   return (

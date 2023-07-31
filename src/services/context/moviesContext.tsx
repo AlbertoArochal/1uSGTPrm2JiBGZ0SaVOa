@@ -1,13 +1,29 @@
 import { createContext } from "react";
+import { MovieType } from "../api/api";
 
-export type initialStateType = {
-  movies: [];
-  setMovies: (movies: []) => void;
+export type MovieContextType = {
+  searchTerm: string;
+  setSearchTerm: (searchTerm: string) => void;
+  movies: MovieType[];
+  setMovies: (movies: MovieType[]) => void;
+  pagination: number;
+  setPagination: (pagination: number) => void;
 };
 
-export const initialState: initialStateType = {
+export const initialState: MovieContextType = {
+  searchTerm: "",
+  setSearchTerm: () => {},
   movies: [],
   setMovies: () => {},
+  pagination: 1,
+  setPagination: () => {},
 };
 
-export const MovieContext = createContext(initialState);
+export const MovieContext = createContext<MovieContextType>({
+  searchTerm: "",
+  setSearchTerm: () => {},
+  movies: [],
+  setMovies: () => {},
+  pagination: 1,
+  setPagination: () => {},
+});

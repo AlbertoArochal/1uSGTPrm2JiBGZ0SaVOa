@@ -1,10 +1,23 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { MovieContext, initialState } from "./moviesContext";
-import { initialStateType } from "./moviesContext";
+import { moviesReducer } from "../reducer/moviesReducer";
 
 export const MovieProvider = ({ children }) => {
+  const [searchTerm, setSearchTerm] = useState(initialState.searchTerm);
+  const [movies, setMovies] = useState(initialState.movies);
+  const [pagination, setPagination] = useState(initialState.pagination);
+
   return (
-    <MovieContext.Provider value={initialState}>
+    <MovieContext.Provider
+      value={{
+        searchTerm,
+        setSearchTerm,
+        movies,
+        setMovies,
+        pagination,
+        setPagination,
+      }}
+    >
       {children}
     </MovieContext.Provider>
   );
