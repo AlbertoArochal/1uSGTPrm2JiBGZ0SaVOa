@@ -8,9 +8,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "coverage": "react-scripts test --collectCoverage"
+    "coverage": "react-scripts test --collectCoverage",
+    "build-css": "nodemon -e scss -x 'sass --watch src/sass/index.scss:src/styles/index.css'"
   },
   "dependencies": {
+    "nodemon": "^3.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",

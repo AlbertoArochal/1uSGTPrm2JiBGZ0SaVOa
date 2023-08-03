@@ -20,7 +20,7 @@ export const Form = () => {
 
   return (
     <>
-      <form action="" onSubmit={handleSubmit}>
+      <form action="" onSubmit={handleSubmit} className="header__form">
         <input onChange={handleChange} type="text" placeholder="Title" />
       </form>
     </>
