@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { MovieContext } from "../../services/context/moviesContext";
 export type results = MovieType[];
 import { usePagination } from "../../hooks/usePagination";
+import { InfoCard } from "./infoCard";
 
 export const MovieCard = ({ results }) => {
   const { pagination, totalPages, nextPage, prevPage, goToPage } =
@@ -17,10 +18,9 @@ export const MovieCard = ({ results }) => {
       <>
         {paginatedResults.map((result: MovieType) => (
           <li key={result.title} className="Movie">
-            <h2>{result.title}</h2>
+            <h3>{result.title}</h3>
             <img src={result.poster} alt={`${result.title} poster image`} />
-            <p>{result.description}</p>
-            <p>{result.year}</p>
+            <InfoCard result={result} />
           </li>
         ))}
       </>

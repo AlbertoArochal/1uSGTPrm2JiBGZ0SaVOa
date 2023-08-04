@@ -20,13 +20,60 @@ code {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
     width: 100%;
+    max-height: 299px;
     color: white;
+    list-style: none;
     .Movie {
       max-width: 200px;
-      img {
-        width: 100%;
-        height: auto;
+      position: relative;
+      margin-top: 12px;
+      h3 {
       }
+      &:hover {
+        cursor: pointer;
+        outline: 1px solid tomato;
+        .InfoCard {
+          display: block;
+        }
+        h3 {
+          display: none;
+        }
+      }
+      h3 {
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 48px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+      .InfoCard {
+        display: none;
+        position: absolute;
+        padding: 4px;
+        bottom: 0;
+        left: 0;
+        max-width: 200px;
+        font-size: 12px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 13px;
+        .InfoCard__title {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        h3 {
+          font-size: 16px;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }

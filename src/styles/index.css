@@ -18,14 +18,59 @@ code {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
   width: 100%;
+  max-height: 299px;
   color: white;
+  list-style: none;
 }
 .results .Movies .Movie {
   max-width: 200px;
+  position: relative;
+  margin-top: 12px;
 }
-.results .Movies .Movie img {
+.results .Movies .Movie:hover {
+  cursor: pointer;
+  outline: 1px solid tomato;
+}
+.results .Movies .Movie:hover .InfoCard {
+  display: block;
+}
+.results .Movies .Movie:hover h3 {
+  display: none;
+}
+.results .Movies .Movie h3 {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
-  height: auto;
+  height: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.results .Movies .Movie .InfoCard {
+  display: none;
+  position: absolute;
+  padding: 4px;
+  bottom: 0;
+  left: 0;
+  max-width: 200px;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 13px;
+}
+.results .Movies .Movie .InfoCard .InfoCard__title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.results .Movies .Movie .InfoCard h3 {
+  font-size: 16px;
+}
+.results .Movies img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
