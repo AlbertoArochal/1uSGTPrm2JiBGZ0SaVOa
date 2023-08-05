@@ -9,6 +9,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+main {
+  height: 932px;
+}
+
 .results {
   display: flex;
   flex-direction: column;
@@ -16,6 +20,7 @@ code {
   margin: auto;
   max-width: 1168px;
   position: relative;
+  z-index: 1000;
 }
 .results .Results__Title {
   width: 96%;
@@ -83,17 +88,15 @@ code {
   height: 100%;
 }
 
-main {
-  height: 100vh;
-}
-main .ButtonPad {
-  position: relative;
+.ButtonPad {
+  position: absolute;
   display: flex;
   justify-content: center;
   margin: auto;
-  height: 90%;
+  height: 80%;
+  width: 100%;
 }
-main .ButtonPad .buttons {
+.ButtonPad .buttons {
   display: flex;
   position: absolute;
   bottom: 4rem;
@@ -101,7 +104,7 @@ main .ButtonPad .buttons {
   height: fit-content;
   margin-top: 39px;
 }
-main .ButtonPad .buttons .numericalButton {
+.ButtonPad .buttons .numericalButton {
   display: grid;
   place-items: center;
   margin: 0 7px;
@@ -111,20 +114,94 @@ main .ButtonPad .buttons .numericalButton {
   border: none;
   background-color: #c42521;
   color: white;
+  opacity: 0.5;
 }
-main .ButtonPad .buttons .numericalButton:hover {
+.ButtonPad .buttons .numericalButton:hover {
   cursor: pointer;
+  opacity: 1;
 }
-main .ButtonPad .buttons .arrowButton {
+.ButtonPad .buttons .active {
+  opacity: 1;
+}
+.ButtonPad .buttons .arrowButton {
   border-radius: 50%;
   border: none;
   background-color: transparent;
   color: white;
-  height: 24px;
-  width: 24px;
 }
-main .ButtonPad .buttons .arrowButton:hover {
+.ButtonPad .buttons .arrowButton:hover {
   cursor: pointer;
+  transform: scale(1.2);
+}
+.ButtonPad .buttons .arrowButton:active {
+  transform: scale(1.1);
+}
+
+.siteName {
+  width: 100%;
+  background-color: black;
+  display: flex;
+}
+.siteName .deadfulImg {
+  margin-left: 23rem;
+  max-height: 46px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: black;
+  height: 224px;
+  display: flex;
+}
+.footer .footer__box {
+  display: flexbox;
+  margin: 14px auto 0 auto;
+}
+.footer .footer__box .footer__logo {
+  display: flex;
+  margin: auto;
+}
+.footer .footer__box .footer__logo img {
+  margin: auto;
+  max-height: 46px;
+}
+.footer .footer__box .footer__social {
+  margin-top: 41px;
+  display: flexbox;
+}
+.footer .footer__box .footer__social a {
+  margin: 0 14px;
+}
+
+.header__form {
+  display: flex;
+  height: 66px;
+  width: 1440px;
+  position: relative;
+}
+.header__form input {
+  width: 1168px;
+  height: 38px;
+  font-size: 16px;
+  margin: auto;
+  border-radius: 5.6px;
+  border: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.header__form input:focus {
+  outline: none;
+}
+.header__form img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

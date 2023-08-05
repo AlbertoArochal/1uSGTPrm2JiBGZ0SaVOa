@@ -9,7 +9,6 @@ function App() {
     <Router>
       <MovieProvider>
         <div className={styles.App}>
-          <Header />
           <Home />
         </div>
       </MovieProvider>

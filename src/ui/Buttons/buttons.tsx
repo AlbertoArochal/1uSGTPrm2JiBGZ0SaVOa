@@ -1,10 +1,11 @@
+import { usePagination } from "../../hooks/usePagination";
 import { useContext } from "react";
 import { MovieContext } from "../../services/context/moviesContext";
-import { usePagination } from "../../hooks/usePagination";
 
 export const Buttons = () => {
+  const { movies } = useContext(MovieContext);
   const { pagination, totalPages, nextPage, prevPage, goToPage } =
-    usePagination(30, 10);
+    usePagination(movies.length, 10);
 
   const pagesNumber = Array.from(Array(totalPages).keys());
 
@@ -28,7 +29,11 @@ export const Buttons = () => {
         {pagesNumber.map((page) => (
           <button
             key={`Page ${page} `}
-            className="numericalButton"
+            className={
+              pagination === page + 1
+                ? "numericalButton active"
+                : "numericalButton"
+            }
             onClick={() => goToPage(page + 1)}
           >
             {page + 1}

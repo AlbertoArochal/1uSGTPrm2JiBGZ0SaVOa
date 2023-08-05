@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+main {
+  height: 932px;
+}
 
 .results {
   display: flex;
@@ -19,6 +22,7 @@ code {
   margin: auto;
   max-width: 1168px;
   position: relative;
+  z-index: 1000;
   .Results__Title {
     width: 96%;
     color: white;
@@ -87,46 +91,119 @@ code {
     }
   }
 }
-main {
-  height: 100vh;
-  .ButtonPad {
-    position: relative;
+.ButtonPad {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 80%;
+  width: 100%;
+  .buttons {
     display: flex;
-    justify-content: center;
-    margin: auto;
-    height: 90%;
-    .buttons {
-      display: flex;
-      position: absolute;
-      bottom: 4rem;
-      width: max-content;
-      height: fit-content;
-      margin-top: 39px;
-      .numericalButton {
-        display: grid;
-        place-items: center;
-        margin: 0 7px;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        border: none;
-        background-color: #c42521;
-        color: white;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-      .arrowButton {
-        border-radius: 50%;
-        border: none;
-        background-color: transparent;
-        color: white;
-        height: 24px;
-        width: 24px;
-        &:hover {
-          cursor: pointer;
-        }
+    position: absolute;
+    bottom: 4rem;
+    width: max-content;
+    height: fit-content;
+    margin-top: 39px;
+    .numericalButton {
+      display: grid;
+      place-items: center;
+      margin: 0 7px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background-color: #c42521;
+      color: white;
+      opacity: 0.5;
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
       }
     }
+    .active {
+      opacity: 1;
+    }
+    .arrowButton {
+      border-radius: 50%;
+      border: none;
+      background-color: transparent;
+      color: white;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.siteName {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  .deadfulImg {
+    margin-left: 23rem;
+    max-height: 46px;
+  }
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: black;
+  height: 224px;
+  display: flex;
+  .footer__box {
+    display: flexbox;
+    margin: 14px auto 0 auto;
+    .footer__logo {
+      display: flex;
+      margin: auto;
+      img {
+        margin: auto;
+        max-height: 46px;
+      }
+    }
+
+    .footer__social {
+      margin-top: 41px;
+      display: flexbox;
+      a {
+        margin: 0 14px;
+      }
+    }
+  }
+}
+
+.header__form {
+  display: flex;
+  height: 66px;
+  width: 1440px;
+  position: relative;
+  input {
+    width: 1168px;
+    height: 38px;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 5.6px;
+    border: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 }

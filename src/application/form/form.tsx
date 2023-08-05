@@ -1,6 +1,7 @@
 import { useRef, useContext, useEffect } from "react";
 import { MovieContext } from "../../services/context/moviesContext";
 import { useMovies } from "../../hooks/useMovies";
+import searchIcon from "../../assets/icon/search.svg";
 export const Form = () => {
   const inputTerm = useRef("");
   const { setSearchTerm } = useContext(MovieContext);
@@ -21,6 +22,7 @@ export const Form = () => {
   return (
     <>
       <form action="" onSubmit={handleSubmit} className="header__form">
+        <img src={searchIcon} alt="search icon" className="searchIcon" />
         <input onChange={handleChange} type="text" placeholder="Title" />
       </form>
     </>
