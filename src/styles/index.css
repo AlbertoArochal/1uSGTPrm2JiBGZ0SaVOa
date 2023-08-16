@@ -89,10 +89,11 @@ main {
 }
 
 .ButtonPad {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   margin: auto;
+  padding-top: 6rem;
   height: 80%;
   width: 100%;
 }
@@ -142,8 +143,14 @@ main {
   background-color: black;
   display: flex;
 }
-.siteName .deadfulImg {
-  margin-left: 23rem;
+.siteName .deadfulImg__container {
+  margin: auto;
+  display: flex;
+  width: 1168px;
+  justify-items: flex-start;
+}
+.siteName .deadfulImg__container .deadfulImg {
+  display: flex;
   max-height: 46px;
 }
 
