@@ -11,37 +11,35 @@ describe("form in header", () => {
     });
 
     test("inputTerm se actualiza al escribir en el campo de entrada", () => {
-        const setSearchTerm = jest.fn();
-        const movies = [];
-        const setMovies = jest.fn();
-        const pagination = {};
-        const setPagination = jest.fn();
-        const contextValue = {
-            setSearchTerm,
-            movies,
-            setMovies,
-            pagination,
-            setPagination,
-        };
-
         render(
-            <MovieContext.Provider value={contextValue}>
+            <MovieContext.Provider
+                value={{
+                    setSearchTerm: jest.fn(),
+                    movies: [],
+                    setMovies: jest.fn(),
+                    pagination: 1,
+                    setPagination: jest.fn(),
+                    searchTerm: "",
+                }}
+            >
                 <Form />
             </MovieContext.Provider>
         );
 
-        const input = screen.getByPlaceholderText("Title");
+        const input = screen.getByPlaceholderText("Title") as HTMLInputElement;
         const testInputValue = "Avengers";
 
         fireEvent.change(input, { target: { value: testInputValue } });
 
         expect(input.value).toBe(testInputValue);
     });
+
     it("should call setSearchTerm when form is submitted", () => {
         const setSearchTerm = jest.fn();
         const movies = [];
+        const searchTerm = "";
         const setMovies = jest.fn();
-        const pagination = {};
+        const pagination = 1;
         const setPagination = jest.fn();
         const contextValue = {
             setSearchTerm,
@@ -49,6 +47,7 @@ describe("form in header", () => {
             setMovies,
             pagination,
             setPagination,
+            searchTerm,
         };
 
         render(
