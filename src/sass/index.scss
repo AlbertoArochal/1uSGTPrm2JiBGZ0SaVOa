@@ -23,12 +23,12 @@ main {
     max-width: 1168px;
     position: relative;
     z-index: 1000;
-    .Results__Title {
+    .results__Title {
         width: 96%;
         color: white;
         max-width: 1168px;
     }
-    .Movies {
+    .movies {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
         width: 100%;
@@ -37,7 +37,7 @@ main {
         list-style: none;
         position: absolute;
         margin-top: 64px;
-        .Movie {
+        .movie {
             max-width: 200px;
             position: relative;
             margin-top: 12px;
@@ -91,7 +91,7 @@ main {
         }
     }
 }
-.ButtonPad {
+.buttonPad {
     position: relative;
     display: flex;
     justify-content: center;
