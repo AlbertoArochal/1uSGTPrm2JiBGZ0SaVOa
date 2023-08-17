@@ -1,6 +1,4 @@
 import { MovieType } from "../../services/api/api";
-import { useContext } from "react";
-import { MovieContext } from "../../services/context/moviesContext";
 export type results = MovieType[];
 import { usePagination } from "../../hooks/usePagination";
 import { InfoCard } from "./infoCard";
