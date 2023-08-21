@@ -1,7 +1,7 @@
 import { MovieCard } from "./MovieCard";
 import { render, screen } from "@testing-library/react";
-import results from "../../mocks/results.json";
-import { usePagination } from "../../hooks/usePagination";
+import results from "../../Mocks/results.json";
+import { usePagination } from "../../Hooks/usePagination";
 
 describe("MovieCard", () => {
     it("should render the component", () => {

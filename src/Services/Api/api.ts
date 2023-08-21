@@ -1,4 +1,4 @@
-import response from "../../mocks/results.json";
+import response from "../../Mocks/results.json";
 
 export type MovieType = {
     title: string;

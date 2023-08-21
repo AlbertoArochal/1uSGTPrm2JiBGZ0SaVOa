@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Form } from "./form";
-import { MovieContext } from "../../services/context/moviesContext";
+import { MovieContext } from "../../Services/Context/moviesContext";
 import { fireEvent } from "@testing-library/dom";
 
 describe("form in header", () => {

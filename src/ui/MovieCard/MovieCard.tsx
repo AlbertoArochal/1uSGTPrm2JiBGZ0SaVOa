@@ -1,6 +1,6 @@
-import { MovieType } from "../../services/api/api";
+import { MovieType } from "../../Services/Api/api";
 export type results = MovieType[];
-import { usePagination } from "../../hooks/usePagination";
+import { usePagination } from "../../Hooks/usePagination";
 import { InfoCard } from "./infoCard";
 
 export const MovieCard = ({ results }) => {

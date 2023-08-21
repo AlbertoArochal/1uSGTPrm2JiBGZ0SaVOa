@@ -1,13 +1,13 @@
-import { Footer } from "../footer/footer";
-import { Results } from "../results/results";
+import { Footer } from "../Footer/footer";
+import { Results } from "../Results/results";
 import { Header } from "../Header";
 
 export function Home() {
-  return (
-    <>
-      <Header />
-      <Results />
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <Results />
+            <Footer />
+        </>
+    );
 }

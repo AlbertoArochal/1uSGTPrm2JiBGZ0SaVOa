@@ -1,6 +1,6 @@
-import title from "../../assets/logo/deadful cherry tomatoes.svg";
-import appStore from "../../assets/button/app store.svg";
-import googlePlay from "../../assets/button/google play.svg";
+import title from "../../Assets/logo/deadful cherry tomatoes.svg";
+import appStore from "../../Assets/button/app store.svg";
+import googlePlay from "../../Assets/button/google play.svg";
 
 export const Footer = () => {
     return (

@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { useMovies } from "../hooks/useMovies";
-import { MovieContext } from "../services/context/moviesContext";
-import { api } from "../services/api/api";
+import { useMovies } from "./useMovies";
+import { MovieContext } from "../Services/Context/moviesContext";
+import { api } from "../Services/Api/api";
 import React from "react";
 
 jest.mock("../services/api/api");

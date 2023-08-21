@@ -1,6 +1,6 @@
 import { InfoCard } from "./infoCard";
 import { render, screen } from "@testing-library/react";
-import results from "../../mocks/results.json";
+import results from "../../Mocks/results.json";
 
 describe("InfoCard", () => {
     it("should render the component", () => {

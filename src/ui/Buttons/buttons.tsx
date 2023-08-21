@@ -1,6 +1,6 @@
-import { usePagination } from "../../hooks/usePagination";
+import { usePagination } from "../../Hooks/usePagination";
 import { useContext } from "react";
-import { MovieContext } from "../../services/context/moviesContext";
+import { MovieContext } from "../../Services/Context/moviesContext";
 
 export const Buttons = () => {
     const { movies } = useContext(MovieContext);

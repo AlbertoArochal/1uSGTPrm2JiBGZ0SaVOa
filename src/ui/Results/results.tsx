@@ -1,7 +1,7 @@
 import { Buttons } from "../Buttons/buttons";
 import { MovieCard } from "../MovieCard/MovieCard";
 import { useContext } from "react";
-import { MovieContext } from "../../services/context/moviesContext";
+import { MovieContext } from "../../Services/Context/moviesContext";
 export const Results = () => {
     const { movies } = useContext(MovieContext);
 

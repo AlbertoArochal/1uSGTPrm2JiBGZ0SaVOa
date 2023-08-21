@@ -1,6 +1,6 @@
-import title from "../../assets/logo/deadful cherry tomatoes.svg";
+import title from "../../Assets/logo/deadful cherry tomatoes.svg";
 import styles from "./Header.module.css";
-import { Form } from "../../application/form/form";
+import { Form } from "../../Aplication/Form/form";
 
 export function Header() {
     return (
