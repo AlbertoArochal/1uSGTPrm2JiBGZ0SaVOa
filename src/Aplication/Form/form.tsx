@@ -22,11 +22,6 @@ export const Form = () => {
     return (
         <>
             <form action="" onSubmit={handleSubmit} className="header__form">
-                <img
-                    src={searchIcon}
-                    alt="search icon"
-                    className="searchIcon"
-                />
                 <input
                     onChange={handleChange}
                     type="text"
